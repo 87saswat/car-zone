@@ -11,3 +11,11 @@ def home (request):
 def about(request):
     context={}
     return render (request, "about.html", context) 
+
+def services(request):
+    context={}
+    return render (request, "services.html", context) 
+
+def contact(request):
+    context={}
+    return render (request, "contact.html", context) 
