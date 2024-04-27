@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'carzone_db',
+        'USER':     'postgres',
+        'PASSWORD': 'password0',
+        'HOST':     '127.0.0.1'
     }
 }
 
@@ -124,3 +127,8 @@ STATICFILES_DIRS = [BASE_DIR/'carzone/static',]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA SETTINGS ..................................................................
+
+MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = '/media/'
